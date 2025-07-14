@@ -79,16 +79,9 @@ export const NavBar = () => {
                 {translations.navbar.projects[language]}
               </Nav.Link>
               <Nav.Link 
-                href="#contact" 
-                className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} 
-                onClick={() => onUpdateActiveLink('contact')}
-              >
-                {translations.navbar.contact[language]}
-              </Nav.Link>
-              <Nav.Link 
-                href="#contact" 
-                className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} 
-                onClick={() => onUpdateActiveLink('contact')}
+                href="#AboutMe" 
+                className={activeLink === 'AboutMe' ? 'active navbar-link' : 'navbar-link'} 
+                onClick={() => onUpdateActiveLink('AboutMe')}
               >
                 {translations.navbar.aboutme[language]}
               </Nav.Link>

@@ -41,7 +41,7 @@ export const LanguageProvider = ({ children }) => {
     // Banner translations
     banner: {
         welcome: {
-          es: 'Bienvenido a mi Portafolio',
+          es: 'Bienvenid@ a mi Portafolio',
           en: 'Welcome to my Portfolio'
         },
         intro: {
@@ -49,7 +49,7 @@ export const LanguageProvider = ({ children }) => {
           en: 'Hi! I\'m ButterBug,'
         },
         description: {
-          es: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.',
+          es: 'Hola, soy Liz Sarahí. estoy a egresar de la universidad de ciencias exactas e ingenieras (CUCEI), estoy buscando un empleo que le agrade mis capacidades y actitudes que les pueda ofrecer.',
           en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'
         },
         connect: {
@@ -60,15 +60,15 @@ export const LanguageProvider = ({ children }) => {
     // Skills translations - Note the lowercase 's' in 'skills'
     skills: {
       title: {
-        es: 'Habilidades',
-        en: 'Skills'
+        es: 'Hardskils',
+        en: 'Hardskils'
       },
       description: {
-        es: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.',
+        es: 'estos son las habilidades que he aprendido a lo largo de mi carrera y cursos, me gusta aprender algo nuevo cada día. tambien tengo softs skills que',
         en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text.'
       },
       webDevelopment: {
-        es: 'Desarrollo Web',
+        es: 'Python',
         en: 'Web Development'
       },
       brandIdentity: {

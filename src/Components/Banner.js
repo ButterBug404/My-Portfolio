@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/header-img.gif";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -13,10 +13,32 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const { language, translations } = useLanguage();
+  const [animationKey, setAnimationKey] = useState(0);
   
   // You can translate the rotating texts as well if needed
   const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
   const period = 2000;
+
+  // Trigger re-animation when language changes
+  useEffect(() => {
+    setAnimationKey(prev => prev + 1);
+  }, [language]);
+
+  // Split text function
+  const splitText = (text) => {
+    return text.split('').map((char, index) => (
+      <span 
+        key={`${animationKey}-${index}`}
+        className="char" 
+        style={{ 
+          animationDelay: `${index * 0.05}s`,
+          display: char === ' ' ? 'inline' : 'inline-block'
+        }}
+      >
+        {char === ' ' ? '\u00A0' : char}
+      </span>
+    ));
+  };
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -58,7 +80,9 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <div>
               <span className="tagline">{translations.banner.welcome[language]}</span>
-              <h1>{translations.banner.intro[language]} <span className="txt-rotate" dataPeriod="0.1" data-rotate='[ "App Developer", "Web Designer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+              <h1 className="split-text" key={animationKey}>
+                {splitText(translations.banner.intro[language])}
+              </h1>
               <p>{translations.banner.description[language]}</p>
               <button onClick={() => console.log('connect')}>{translations.banner.connect[language]} <ArrowRightCircle size={25} /></button>
             </div>

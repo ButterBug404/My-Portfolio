@@ -5,7 +5,7 @@ import { NavBar } from "./Components/NavBar";
 import { Banner } from "./Components/Banner";
 import { Skills } from "./Components/Skills";
 import { Projects } from "./Components/Projects";
-import { Contact } from "./Components/Contact";
+import { AboutMe } from "./Components/AboutMe";
 import { Footer } from "./Components/Footer";
 import { LanguageProvider } from './context/LanguageContext';
 
@@ -17,7 +17,7 @@ function App() {
         <Banner />
         <Skills />
         <Projects />
-        <Contact />
+        <AboutMe />
         <Footer />
       </div>
     </LanguageProvider>

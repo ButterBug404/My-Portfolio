@@ -165,13 +165,14 @@ span.navbar-text {
 .navbar-text button {
   font-weight: 700;
   color: #fff;
-  border: 1px solid #fff;
+  border: 2.5px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
-	position: relative;
-	background-color: transparent;
-	transition: 0.3s ease-in-out;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
 }
 .navbar-text button span {
   z-index: 1;
@@ -256,10 +257,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   padding: 8px 10px;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.596);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
+  border-radius: 10px; /* Cambiar aquí */
 }
 .banner h1 {
   font-size: 65px;
@@ -269,6 +271,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: block;
 }
+
+.banner .split-text {
+  display: inline-block;
+  /* Remove overflow: hidden to show letters with descenders */
+}
+
+.banner .split-text .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: splitTextReveal 0.8s ease-out forwards;
+}
+
+@keyframes splitTextReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .banner p {
   color: #B8B8B8;
   font-size: 18px;
@@ -296,6 +318,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
+  margin-top: -110px; /* Sube la imagen 50px */
 }
 @keyframes updown {
     0% {
@@ -530,7 +553,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
-  border-radius: 0;
+  border-radius:0;
   position: relative;
   transition: 0.3s ease-in-out;
 }
