@@ -60,8 +60,8 @@ export const LanguageProvider = ({ children }) => {
     // Skills translations - Note the lowercase 's' in 'skills'
     skills: {
       title: {
-        es: 'Hardskils',
-        en: 'Hardskils'
+        es: 'Habilidades',
+        en: 'Skills'
       },
       description: {
         es: 'estos son las habilidades que he aprendido a lo largo de mi carrera y cursos, me gusta aprender algo nuevo cada día. tambien tengo softs skills que',

@@ -33,10 +33,11 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
+      <div className="skill-bx wow zoomIn">
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
+                    
                         <h2>{translations.skills.title[language]}</h2>
                         <p>{translations.skills.description[language]}</p>
                         <h3>{translations.skills.softSkills.hardskills[language]}</h3>
