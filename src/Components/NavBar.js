@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
-import { HashLink } from 'react-router-hash-link';
+import logo from '../assets/img/bb-logo1.png';
 import { BrowserRouter as Router } from "react-router-dom";
 import { useLanguage } from '../context/LanguageContext';
 
@@ -9,6 +8,16 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const { language, toggleLanguage, translations } = useLanguage();
+  const hoverSoundRef = useRef(null);
+
+  const playHoverSound = () => {
+    if (hoverSoundRef.current) {
+      hoverSoundRef.current.currentTime = 0;
+      hoverSoundRef.current.play().catch(error => {
+        console.log("Error al reproducir el audio:", error);
+      });
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -61,6 +70,7 @@ export const NavBar = () => {
                 href="#home" 
                 className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
                 onClick={() => onUpdateActiveLink('home')}
+                onMouseEnter={playHoverSound}
               >
                 {translations.navbar.home[language]}
               </Nav.Link>
@@ -68,6 +78,7 @@ export const NavBar = () => {
                 href="#skills" 
                 className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
                 onClick={() => onUpdateActiveLink('skills')}
+                onMouseEnter={playHoverSound}
               >
                 {translations.navbar.skills[language]}
               </Nav.Link>
@@ -75,32 +86,38 @@ export const NavBar = () => {
                 href="#projects" 
                 className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} 
                 onClick={() => onUpdateActiveLink('projects')}
+                onMouseEnter={playHoverSound}
               >
                 {translations.navbar.projects[language]}
               </Nav.Link>
               <Nav.Link 
-                href="#AboutMe" 
-                className={activeLink === 'AboutMe' ? 'active navbar-link' : 'navbar-link'} 
-                onClick={() => onUpdateActiveLink('AboutMe')}
+                href="#aboutme" 
+                className={activeLink === 'aboutme' ? 'active navbar-link' : 'navbar-link'} 
+                onClick={() => onUpdateActiveLink('aboutme')}
+                onMouseEnter={playHoverSound}
               >
                 {translations.navbar.aboutme[language]}
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://dribbble.com/Butterbug404" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-dribbble"></ion-icon></a>
-                <a href="https://www.linkedin.com/in/liz-sereno-13a7b6260/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
-                <a href="https://github.com/ButterBug404" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-octocat"></ion-icon></a>
+                <a href="https://dribbble.com/Butterbug404" target="_blank" rel="noopener noreferrer" onMouseEnter={playHoverSound}><ion-icon name="logo-dribbble"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/liz-sereno-13a7b6260/" target="_blank" rel="noopener noreferrer" onMouseEnter={playHoverSound}><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://github.com/ButterBug404" target="_blank" rel="noopener noreferrer" onMouseEnter={playHoverSound}><ion-icon name="logo-octocat"></ion-icon></a>
               </div>
-              <button className="language-toggle" onClick={toggleLanguage}>
+              <button className="language-toggle" onClick={toggleLanguage} onMouseEnter={playHoverSound}>
                 {language === 'es' ? 'ENG' : 'ESP'}
               </button>
-              <HashLink to='https://butterbug404.carrd.co/'>
-                <button className="vvd"><span>Carrd.co</span></button>
-              </HashLink>
+
             </span>
           </Navbar.Collapse>
         </Container>
+        
+        {/* Audio element for hover sound */}
+        <audio ref={hoverSoundRef} preload="auto">
+          <source src={require('../assets/1.mp3')} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
       </Navbar>
     </Router>
   )

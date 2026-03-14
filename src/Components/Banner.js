@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.gif";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+
 import { useLanguage } from '../context/LanguageContext';
 
 export const Banner = () => {
@@ -84,12 +81,12 @@ export const Banner = () => {
                 {splitText(translations.banner.intro[language])}
               </h1>
               <p>{translations.banner.description[language]}</p>
-              <button onClick={() => console.log('connect')}>{translations.banner.connect[language]} <ArrowRightCircle size={25} /></button>
+              {/* <button onClick={() => console.log('connect')}>{translations.banner.connect[language]} <ArrowRightCircle size={25} /></button> */}
             </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <div>
-              <img src={headerImg} alt="Header Img"/>
+              <img src="https://papiroflexio.carrd.co/assets/images/image01.png?v=60b32498" alt="Header Img"/>
             </div>
           </Col>
         </Row>
