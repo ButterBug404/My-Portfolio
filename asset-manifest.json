@@ -1,10 +1,8 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.39761b12.css",
-    "main.js": "/My-Portfolio/static/js/main.588f4dff.js",
+    "main.css": "/My-Portfolio/static/css/main.b6748dd7.css",
+    "main.js": "/My-Portfolio/static/js/main.37f55e74.js",
     "static/js/453.298f5782.chunk.js": "/My-Portfolio/static/js/453.298f5782.chunk.js",
-    "static/media/color-sharp.png": "/My-Portfolio/static/media/color-sharp.bea361cfef80fefc2d1e.png",
-    "static/media/color-sharp2.png": "/My-Portfolio/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
     "static/media/project-img2.png": "/My-Portfolio/static/media/project-img2.bf4ecaea7b90f9f1d258.png",
     "static/media/project-img8.png": "/My-Portfolio/static/media/project-img8.7e6b027d6252130429c2.png",
     "static/media/acb.png": "/My-Portfolio/static/media/acb.5132b9b698e9b8a9cc4b.png",
@@ -25,21 +23,19 @@
     "static/media/ilustracion.png": "/My-Portfolio/static/media/ilustracion.186181e8e1f2f03974b3.png",
     "static/media/abc.png": "/My-Portfolio/static/media/abc.c3d3c4a53fb78d92047b.png",
     "static/media/footerimg.png": "/My-Portfolio/static/media/footerimg.e8687efe73679a9a90fe.png",
-    "static/media/project-img4.png": "/My-Portfolio/static/media/project-img4.1ca986797cfb04013352.png",
     "static/media/4.mp3": "/My-Portfolio/static/media/4.8385beb757ddbf6be4da.mp3",
     "static/media/app.png": "/My-Portfolio/static/media/app.6ccd1af1960ed95b7bea.png",
     "static/media/revicons.eot": "/My-Portfolio/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/My-Portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/My-Portfolio/static/media/revicons.e8746a624ed098489406.woff",
-    "static/media/meter2.svg": "/My-Portfolio/static/media/meter2.1b8f416eccd1ee162218b8528a1c5cdc.svg",
     "static/media/1.mp3": "/My-Portfolio/static/media/1.749ed02f741d80141118.mp3",
     "index.html": "/My-Portfolio/index.html",
-    "main.39761b12.css.map": "/My-Portfolio/static/css/main.39761b12.css.map",
-    "main.588f4dff.js.map": "/My-Portfolio/static/js/main.588f4dff.js.map",
+    "main.b6748dd7.css.map": "/My-Portfolio/static/css/main.b6748dd7.css.map",
+    "main.37f55e74.js.map": "/My-Portfolio/static/js/main.37f55e74.js.map",
     "453.298f5782.chunk.js.map": "/My-Portfolio/static/js/453.298f5782.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39761b12.css",
-    "static/js/main.588f4dff.js"
+    "static/css/main.b6748dd7.css",
+    "static/js/main.37f55e74.js"
   ]
 }
